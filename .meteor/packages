@@ -8,4 +8,9 @@ autopublish
 insecure
 accounts-ui
 accounts-github
+mizzao:bootstrap-3
+accounts-google
+accounts-twitter
+aldeed:autoform
+aldeed:collection2
 

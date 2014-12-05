@@ -3,9 +3,15 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> loginButtons}}
-  {{> rooms}}
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Welcome to Meteor!</h1>
+      {{> loginButtons}}
+    </div>
+    <div class="col-md-4">
+      {{> rooms}}
+      {{> add_room}}
+    </div>
+  </div>
 </body>
 
