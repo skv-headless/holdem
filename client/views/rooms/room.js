@@ -1,11 +1,13 @@
 Template.room.helpers({
   current: function() {
-    if(!Meteor.user() ||
-       !Meteor.user().profile ||
-       !Meteor.user().profile.room_id) {
-      return false;
-    }
-    return Rooms.findOne({_id: Meteor.user().profile.room_id});
+    return currentRoom(Meteor.user())
+  },
+  users: function() {
+    var room = currentRoom(Meteor.user());
+    return Meteor.users.find({'profile.room_id': room._id})
+  },
+  avatar: function(user) {
+    return avatar(user);
   }
 });
 
