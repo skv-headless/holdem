@@ -7,8 +7,10 @@
 
       {{#each users}}
         <div class="players">
-          <img width="48px" height="48px" src="{{avatar this}}" class="img-circle">
-          <p class="account">100</p>
+          <img src="{{avatar this}}" class="img-circle avatar">
+          <p class="account">account: {{this.profile.account}}</p>
+          <p class="bet">bet: {{this.profile.bet}}</p>
+          <div class="clearfix"></div>
           <div class="my-cards playingCards fourColours">
             {{> card rank=2 suit="hearts" owner=this}}
             {{> card rank=2 suit="hearts" owner=this}}
@@ -25,6 +27,12 @@
         {{> card rank=2 suit="hearts"}}
         {{> card rank=2 suit="hearts"}}
       </div>
+
+      <div class="clearfix"></div>
+
+      <p>
+        in bank: {{current.bank}}
+      </p>
     </div>
   {{/if}}
 </template>

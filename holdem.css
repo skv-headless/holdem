@@ -3,6 +3,8 @@
 .room .players{
   float: left;
 }
-.room .players .account{
-  text-align: center;
+.room .players .avatar{
+  float: left;
+  width: 48px;
+  height: 48px;
 }
