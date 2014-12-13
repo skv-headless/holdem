@@ -1,0 +1,10 @@
+<template name="card">
+{{#if visibleForCurrentUser owner }}
+  <div class="card rank-{{rank}} {{suit}}">
+    <div class="rank">{{rank}}</div>
+    <div class="suit"></div>
+  </div>
+{{else}}
+  <div class="card back"></div>
+{{/if}}
+</template>
