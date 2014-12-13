@@ -5,6 +5,15 @@ Rooms.attachSchema(new SimpleSchema({
     type: String,
     label: "Name",
     max: 200
+  },
+  state: {
+    type: String,
+    allowedValues: ['start', 'flop', 'turn', 'river', 'showdown'],
+    defaultValue: 'start'
+  },
+  bank: {
+    type: Number,
+    defaultValue: 0
   }
 }));
 

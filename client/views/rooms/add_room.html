@@ -1,3 +1,8 @@
 <template name="add_room">
-  {{> quickForm collection="Rooms" id="insertRoomForm" type="insert"}}
+  {{#autoForm collection="Rooms" id="insertRoomForm" type="insert"}}
+    <fieldset>
+      {{> afQuickField name='name'}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Create</button>
+  {{/autoForm}}
 </template>

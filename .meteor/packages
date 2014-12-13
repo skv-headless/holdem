@@ -13,4 +13,6 @@ accounts-google
 accounts-twitter
 aldeed:autoform
 aldeed:collection2
+accounts-password
+natestrauser:statemachine
 

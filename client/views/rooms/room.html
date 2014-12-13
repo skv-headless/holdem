@@ -1,31 +1,31 @@
 <template name="room">
-  <div class="room">
-    {{#if current}}
+  {{#if current}}
+    <div class="room">
       {{#with current}}
         <h3>{{name}}</h3>
       {{/with}}
-    {{/if}}
 
-    {{#each users}}
-      <div class="players">
-        <img width="48px" height="48px" src="{{avatar this}}" class="img-circle">
-        <p class="account">100</p>
-        <div class="my-cards playingCards fourColours">
-          {{> card rank=2 suit="hearts" owner=this}}
-          {{> card rank=2 suit="hearts" owner=this}}
+      {{#each users}}
+        <div class="players">
+          <img width="48px" height="48px" src="{{avatar this}}" class="img-circle">
+          <p class="account">100</p>
+          <div class="my-cards playingCards fourColours">
+            {{> card rank=2 suit="hearts" owner=this}}
+            {{> card rank=2 suit="hearts" owner=this}}
+          </div>
         </div>
+      {{/each}}
+
+      <div class="clearfix"></div>
+
+      <div class="common-cards playingCards fourColours">
+        {{> card rank=2 suit="hearts"}}
+        {{> card rank=2 suit="hearts"}}
+        {{> card rank=2 suit="hearts"}}
+        {{> card rank=2 suit="hearts"}}
+        {{> card rank=2 suit="hearts"}}
       </div>
-    {{/each}}
-
-    <div class="clearfix"></div>
-
-    <div class="common-cards playingCards fourColours">
-      {{> card rank=2 suit="hearts"}}
-      {{> card rank=2 suit="hearts"}}
-      {{> card rank=2 suit="hearts"}}
-      {{> card rank=2 suit="hearts"}}
-      {{> card rank=2 suit="hearts"}}
     </div>
-  </div>
+  {{/if}}
 </template>
 
