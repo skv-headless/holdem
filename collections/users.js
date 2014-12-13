@@ -65,6 +65,11 @@ User = new SimpleSchema({
         type: Object,
         optional: true,
         blackbox: true
+    },
+    status: {
+        type: Object,
+        optional: true,
+        blackbox: true
     }
 });
 
