@@ -14,6 +14,10 @@ Rooms.attachSchema(new SimpleSchema({
   bank: {
     type: Number,
     defaultValue: 0
+  },
+  owner_id: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id
   }
 }));
 
