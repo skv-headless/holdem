@@ -18,6 +18,12 @@ Rooms.attachSchema(new SimpleSchema({
   owner_id: {
     type: String,
     regEx: SimpleSchema.RegEx.Id
+  },
+  cards: {
+    type: [CardsSchema],
+    minCount: 0,
+    maxCount: 52,
+    optional: true
   }
 }));
 

@@ -26,19 +26,10 @@ UserProfile = new SimpleSchema({
     defaultValue: 0
   },
   cards: {
-    type: [Object],
+    type: [CardsSchema],
     minCount: 2,
     maxCount: 2,
     optional: true
-  },
-  "cards.$.suit": {
-    type: String,
-    allowedValues: ['diams', 'hearts', 'spades', 'clubs']
-  },
-  "cards.$.rank": {
-    type: String,
-    allowedValues: ['2', '3', '4', '5', '6', '7', '8', '9', '10',
-      'j', 'q', 'k', 'a']
   }
 });
 
