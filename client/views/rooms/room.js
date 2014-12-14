@@ -22,7 +22,7 @@ Template.room.helpers({
 
 Template.room.events({
   "click #startGame": function(event, template) {
-    console.log('start!!')
+    Meteor.call('toBlind', currentRoom(Meteor.user()));
   }
 })
 
