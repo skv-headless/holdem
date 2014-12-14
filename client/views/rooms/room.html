@@ -1,9 +1,14 @@
 <template name="room">
   {{#if current}}
     <div class="room">
-      {{#with current}}
-        <h3>{{name}}</h3>
-      {{/with}}
+      <h3>{{current.name}}</h3>
+      {{#if needStart}}
+        <button type="button" id="startGame" class="btn btn-primary">
+          Start
+        </button>
+      {{/if}}
+
+      <div class="clearfix"></div>
 
       {{#each users}}
         <div class="players">

@@ -8,8 +8,8 @@ Rooms.attachSchema(new SimpleSchema({
   },
   state: {
     type: String,
-    allowedValues: ['start', 'flop', 'turn', 'river', 'showdown'],
-    defaultValue: 'start'
+    allowedValues: ['ready', 'blind', 'flop', 'turn', 'river', 'showdown'],
+    defaultValue: 'ready'
   },
   bank: {
     type: Number,
