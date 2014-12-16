@@ -20,7 +20,7 @@ UserProfile = new SimpleSchema({
   },
   account: {
     type: Number,
-    defaultValue: 100
+    defaultValue: User.DEFAULT_ACCOUNT
   },
   bet: {
     type: Number,
@@ -34,7 +34,7 @@ UserProfile = new SimpleSchema({
   }
 });
 
-User = new SimpleSchema({
+UserSchema = new SimpleSchema({
     emails: {
         type: [Object],
         optional: true
@@ -65,5 +65,5 @@ User = new SimpleSchema({
     }
 });
 
-Meteor.users.attachSchema(User);
+Meteor.users.attachSchema(UserSchema);
 

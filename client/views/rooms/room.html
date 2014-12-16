@@ -14,7 +14,7 @@
         <div class="players">
           <img src="{{avatar this}}" class="img-circle avatar">
           <p class="account">account: {{this.profile.account}}</p>
-          {{#if isCurrentUser this}}
+          {{#if isCurrentUser this current}}
             <input type="text" name="bet" size=2>
           {{/if}}
           <p class="bet">bet: {{this.profile.bet}}</p>

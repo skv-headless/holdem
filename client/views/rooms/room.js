@@ -18,8 +18,8 @@ Template.room.helpers({
       room.state == 'ready' &&
       usersCount >= 2;
   },
-  isCurrentUser: function(user) {
-    return user._id == Meteor.userId();
+  isCurrentUser: function(user, room) {
+    return user._id == room.current_user_id;
   }
 });
 
@@ -28,7 +28,9 @@ Template.room.events({
     Meteor.call('toBlind', currentRoom(Meteor.user()));
   },
   "keypress [name=bet]": function (event, template) {
-    if (event.which === 13) { console.log('Ваша ставка принята!'); }
+    if (event.which === 13) {
+      console.log('Ваша ставка принята!');
+    }
   }
-})
+});
 

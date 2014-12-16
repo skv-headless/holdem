@@ -30,6 +30,16 @@ Rooms.attachSchema(new SimpleSchema({
     minCount: 0,
     maxCount: 5,
     optional: true
+  },
+  dealer_id: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id,
+    optional: true
+  },
+  current_user_id: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id,
+    optional: true
   }
 }));
 
