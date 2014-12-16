@@ -17,12 +17,18 @@ Template.room.helpers({
     return room.owner_id == user._id &&
       room.state == 'ready' &&
       usersCount >= 2;
+  },
+  isCurrentUser: function(user) {
+    return user._id == Meteor.userId();
   }
 });
 
 Template.room.events({
   "click #startGame": function(event, template) {
     Meteor.call('toBlind', currentRoom(Meteor.user()));
+  },
+  "keypress [name=bet]": function (event, template) {
+    if (event.which === 13) { console.log('Ваша ставка принята!'); }
   }
 })
 
