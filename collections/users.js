@@ -15,7 +15,8 @@ UserProfile = new SimpleSchema({
     optional: true
   },
   name: {
-    type: String
+    type: String,
+    optional: true
   },
   account: {
     type: Number,

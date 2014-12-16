@@ -23,7 +23,8 @@ if (!(typeof MochaWeb === 'undefined')){
 
         chai.assert.equal(Rooms.find().count(), 1, 'not one room');
         chai.assert.equal(room.state, 'blind', 'not blind state');
-        chai.assert.lengthOf(room.cards, 48, 'rest deck');
+        chai.assert.lengthOf(room.cards, 43, 'rest deck');
+        chai.assert.lengthOf(room.communityCards, 5, 'community cards');
         chai.assert.lengthOf(user1.profile.cards, 2, 'user cards');
         chai.assert.lengthOf(user2.profile.cards, 2, 'user cards');
       });

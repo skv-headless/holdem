@@ -24,6 +24,12 @@ Rooms.attachSchema(new SimpleSchema({
     minCount: 0,
     maxCount: 52,
     optional: true
+  },
+  communityCards: {
+    type: [CardsSchema],
+    minCount: 0,
+    maxCount: 5,
+    optional: true
   }
 }));
 

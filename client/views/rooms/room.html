@@ -17,8 +17,9 @@
           <p class="bet">bet: {{this.profile.bet}}</p>
           <div class="clearfix"></div>
           <div class="my-cards playingCards fourColours">
-            {{> card rank=2 suit="hearts" owner=this}}
-            {{> card rank=2 suit="hearts" owner=this}}
+            {{#each this.profile.cards}}
+              {{> card rank=rank suit=suit owner=..}}
+            {{/each}}
           </div>
         </div>
       {{/each}}
@@ -26,11 +27,9 @@
       <div class="clearfix"></div>
 
       <div class="common-cards playingCards fourColours">
-        {{> card rank=2 suit="hearts"}}
-        {{> card rank=2 suit="hearts"}}
-        {{> card rank=2 suit="hearts"}}
-        {{> card rank=2 suit="hearts"}}
-        {{> card rank=2 suit="hearts"}}
+        {{#each current.communityCards}}
+          {{> card rank=rank suit=suit}}
+        {{/each}}
       </div>
 
       <div class="clearfix"></div>
