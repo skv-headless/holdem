@@ -11,9 +11,10 @@ if (!(typeof MochaWeb === 'undefined')){
         this.user2 = Factory.create('user');
         this.room = Factory.create('room', {owner_id: user1._id});
         Meteor.users.update({}, {$set: {'profile.room_id': room._id}},
-                            {multi: true});
-        Meteor.call('toBlind', room);
-        done();
+          {multi: true}, function() {
+            Meteor.call('toBlind', room);
+            done();
+          });
       });
 
       it("should give cards to players", function(){
